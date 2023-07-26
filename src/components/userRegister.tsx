@@ -14,11 +14,14 @@ export const UserRegister = ()=>{
 
         event.preventDefault()
 
+        alert("testing")
+
         try{
             //axios post request to create a user account
             const response = await axios.post("https://homehub-api.onrender.com/auth/register",{
                 username:username,
                 password:password
+              
             });
 
             //alert message
