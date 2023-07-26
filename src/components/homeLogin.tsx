@@ -36,7 +36,7 @@ export const HomeLogin = ()=>{
 
         try{
             //axios put request confirm correct user input
-            const response = await axios.put("http://localhost:3001/home/join",{
+            const response = await axios.put("https://homehub-api.onrender.com/home/join",{
                 name:name,
                 code:code,
                 userId:userId
