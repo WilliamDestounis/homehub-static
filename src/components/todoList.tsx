@@ -30,7 +30,7 @@ export const TodoList = ()=>{
 
     try{
         //axios get request to return information about the current user
-        const response = await axios.get(`http://localhost:3001/todo/${userId}`,{headers: {authorization: cookies.access_token}})
+        const response = await axios.get(`https://homehub-api.onrender.com/todo/${userId}`,{headers: {authorization: cookies.access_token}})
         
         if(response.data.todo){
             //if a todo exists, modify the current todoList
@@ -57,7 +57,7 @@ export const TodoList = ()=>{
 
             try{
                 //axios put request to update information, the backend will add to the users home todo array
-                const response = await axios.put("http://localhost:3001/todo/addTodo",{
+                const response = await axios.put("https://homehub-api.onrender.com/todo/addTodo",{
                     userId:userId,
                     newTodo: todo,
                 },{headers: {authorization: cookies.access_token}});
@@ -85,7 +85,7 @@ export const TodoList = ()=>{
 
             try{
                 //axios put request to update information about the current user todoList
-                const response = await axios.put("http://localhost:3001/todo/deleteTodo",{
+                const response = await axios.put("https://homehub-api.onrender.com/todo/deleteTodo",{
                     userId:userId,
                     element: element,
                 },{headers: {authorization: cookies.access_token}});
