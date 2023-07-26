@@ -43,7 +43,7 @@ export const SplitExpense = ()=>{
 
         try {
             //axios get request to return information about the current user
-            const response = await axios.get(`http://localhost:3001/ledger/${userId}`,{headers: {authorization: cookies.access_token}})
+            const response = await axios.get(`https://homehub-api.onrender.com/ledger/${userId}`,{headers: {authorization: cookies.access_token}})
 
             if(response.data.homeMembers){
                 //if homeMembers exist, then update for display
@@ -113,7 +113,7 @@ export const SplitExpense = ()=>{
         try{
             //axios post request to send information to the API 
             //the backend will create a Recievables model and add it to the users "recievables" array
-            const response = await axios.post("http://localhost:3001/ledger/addSplit",{
+            const response = await axios.post("https://homehub-api.onrender.com/ledger/addSplit",{
                 userId : userId,
                 expName : expName,
                 exp : exp,
@@ -129,7 +129,7 @@ export const SplitExpense = ()=>{
         try{
             //axios post request to send information to the API 
             //the backend will create a Payables model for each selected split member and add it to their "payables" array
-            await axios.post("http://localhost:3001/ledger/split",{
+            await axios.post("https://homehub-api.onrender.com/ledger/split",{
                 userId : userId,
                 recId:recId,
                 expName : expName,
