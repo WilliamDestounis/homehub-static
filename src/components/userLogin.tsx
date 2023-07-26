@@ -27,7 +27,7 @@ export const UserLogin = ()=>{
 
         try{
             //axios put request to verify user authentication
-            const response = await axios.put("http://localhost:3001/auth/login",{
+            const response = await axios.put("https://homehub-api.onrender.com/auth/login",{
                 username:username,
                 password:password
             });
