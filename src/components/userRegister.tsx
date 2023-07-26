@@ -12,7 +12,7 @@ export const UserRegister = ()=>{
 
     const onSubmit = async (event:React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
 
-        event.preventDefault()
+        event.preventDefault();
 
         try{
             //axios post request to create a user account
