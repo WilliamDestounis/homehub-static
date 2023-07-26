@@ -93,7 +93,7 @@ export const Home = ()=>{
                                 <ul>
                                 <li>A House Todo</li>
                                 <li>A House Chat</li>
-                                <li>A House Ledger To Manage Explense Splitting</li>
+                                <li>A House Ledger To Manage Expense Splitting</li>
                                 </ul>
                             </div>              
                         </div>
