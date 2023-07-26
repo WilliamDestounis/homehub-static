@@ -37,7 +37,7 @@ export const Home = ()=>{
 
         try {
             //axios get request to return information about the current user
-            const response = await axios.get(`http://localhost:3001/auth/${userId}`)
+            const response = await axios.get(`https://homehub-api.onrender.com/auth/${userId}`)
 
             if(response.data.home != -1){
                 //if the user has a home, update the variable
