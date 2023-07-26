@@ -56,7 +56,7 @@ export const Ledger = ()=>{
 
         try {
             //axios get request to return information about the current user
-            const response = await axios.get(`http://localhost:3001/ledger/${userId}`,{headers: {authorization: cookies.access_token}})
+            const response = await axios.get(`https://homehub-api.onrender.com/ledger/${userId}`,{headers: {authorization: cookies.access_token}})
 
             //using response data to update variables, this will help set up the ledger display
 
@@ -83,7 +83,7 @@ export const Ledger = ()=>{
             //this will remove the payable object from the payables array in the current user
             //if the expense is paid off, the recievables object Id will be removed from the sentUsers "recievables" array
 
-            const response = await axios.put(`http://localhost:3001/ledger/paySplit`,{
+            const response = await axios.put(`https://homehub-api.onrender.com/ledger/paySplit`,{
                 userId:userId,
                 payIndex:active 
             },{headers: {authorization: cookies.access_token}})
@@ -105,7 +105,7 @@ export const Ledger = ()=>{
 
         try {
             //axios delete request to delete the Payable model assosiated with the user id from the Payables collection
-            await axios.delete(`http://localhost:3001/remove/paySplitP/${payId}`,{headers: {authorization: cookies.access_token}})
+            await axios.delete(`https://homehub-api.onrender.com/remove/paySplitP/${payId}`,{headers: {authorization: cookies.access_token}})
 
         } catch (error) {
             console.log(error)
@@ -115,7 +115,7 @@ export const Ledger = ()=>{
         if(paid){
             try {
                 //the Recievable model associated with the userSent id is deleted from the database and from their recievables array
-                await axios.delete(`http://localhost:3001/remove/paySplitR/${recId}`,{headers: {authorization: cookies.access_token}})
+                await axios.delete(`https://homehub-api.onrender.com/remove/paySplitR/${recId}`,{headers: {authorization: cookies.access_token}})
 
             } catch (error) {
                 console.log(error)
