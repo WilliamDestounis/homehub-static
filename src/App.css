@@ -1,0 +1,95 @@
+.navi{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: .9;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left:100px
+}
+
+.nav-item{
+    /* used to format shape */
+    display:inline-block;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    padding : 15px;
+
+    /*used to format text */
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item:hover{
+    background-color: black;
+    color: whitesmoke;
+
+}
+
+.r-nav-item{
+    display:inline-block;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    padding : 15px;
+
+    /*used to format text */
+    text-decoration: none;
+    color: black;
+}
+
+.r-nav-item:hover{
+    background-color: black;
+    color: whitesmoke;
+    content:" ";
+
+    pointer-events: none;
+    opacity: 0.7
+
+}
+  
+.img{
+    background-image: url(/Users/billydestounis/Downloads/HomeHub/client/homehub/public/homes.jpg) ;
+    background-position: center;
+    background-size:cover;
+    height: 100vh;
+}
+
+
+
+.form{
+    background-color:whitesmoke;
+    border-radius: 25px;
+    width:550px;
+    margin:auto;
+
+}
+
+.in-form{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top:25px;
+    padding-bottom:25px;
+}
+
+.home-page{
+    columns: 2;
+    margin-top: 200px;
+
+}
+
+.ledger{
+    columns: 2;
+}
+
+.user-chat{
+    background-color: rgb(65, 105, 250);
+}
+
+.group-chat{
+    background-color: rgb(128, 222, 34);
+}
+
+.white-text{
+    color :  whitesmoke;
+}
