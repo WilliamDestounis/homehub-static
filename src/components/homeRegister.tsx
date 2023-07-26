@@ -35,7 +35,7 @@ export const HomeRegister = ()=>{
 
         try{
             //axios post request to send information about the current user, it will create a Home model
-            const response = await axios.post("http://localhost:3001/home/create",{
+            const response = await axios.post("https://homehub-api.onrender.com/home/create",{
                 name:name,
                 code:code,
                 userId: userId
