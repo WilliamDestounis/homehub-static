@@ -41,7 +41,7 @@ export const HomeChat = ()=>{
 
     try{
         //axios get request to return information about the current user
-        const response = await axios.get(`http://localhost:3001/chat/${userId}`,{headers: {authorization: cookies.access_token}})
+        const response = await axios.get(`https://homehub-api.onrender.com/chat/${userId}`,{headers: {authorization: cookies.access_token}})
 
         const chatObjArray = response.data.chat
 
@@ -62,7 +62,7 @@ export const HomeChat = ()=>{
 
         try{
             //put request to update the users home chat
-            const response = await axios.put("http://localhost:3001/chat/addChat",{
+            const response = await axios.put("https://homehub-api.onrender.com/chat/addChat",{
                 userId:userId,
                 chat:chat
             },{headers: {authorization: cookies.access_token}})
