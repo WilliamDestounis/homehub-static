@@ -67,6 +67,10 @@ export const TodoList = ()=>{
                     setTodoList(response.data.newTodoList)
                     }
 
+                if(response.data.message){
+                    alert(response.data.message)
+                }
+
             }catch(e){
                 console.log(e);
             }
