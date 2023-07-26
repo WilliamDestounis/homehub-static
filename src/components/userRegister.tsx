@@ -16,7 +16,7 @@ export const UserRegister = ()=>{
 
         try{
             //axios post request to create a user account
-            const response = await axios.post("http://localhost:3001/auth/register",{
+            const response = await axios.post("https://homehub-api.onrender.com/auth/register",{
                 username:username,
                 password:password
             });
