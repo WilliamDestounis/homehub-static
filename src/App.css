@@ -49,7 +49,7 @@
 }
   
 .img{
-    background-image: url(./public/homes.jpg) ;
+    background-image: url(https://github.com/WilliamDestounis/homehub-static/blob/main/public/homes.jpg) ;
     background-position: center;
     background-size:cover;
     height: 100vh;
