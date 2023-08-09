@@ -72,6 +72,8 @@ export const HomeChat = ()=>{
                 alert(response.data.message);
             }
 
+            setChat("")
+
         }catch(e){
             console.log(e);
         }
@@ -105,7 +107,7 @@ export const HomeChat = ()=>{
         </ul>
         
             <div className="form-floating mt-3 mb-3">
-                <input type="text" className="form-control" id="chatInput" onChange={(event)=>{setChat(event.target.value)}}/>
+                <input type="text" value={chat} className="form-control" id="chatInput" onChange={(event)=>{setChat(event.target.value)}}/>
                 <label htmlFor="chatInput">Chat</label>
             </div>
 
