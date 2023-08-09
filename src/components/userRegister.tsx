@@ -28,6 +28,9 @@ export const UserRegister = ()=>{
         }catch(e){
             console.log(e);
         }
+
+        setUsername("")
+        setPassword("")
     
     }
 
@@ -38,12 +41,12 @@ export const UserRegister = ()=>{
         <h1>Register</h1>
         
         <div className="form-floating mb-3">
-            <input type="text" className="form-control" id="floatingInput2" onChange={(event)=>setUsername(event.target.value)}/>
+            <input type="text" value={username} className="form-control" id="floatingInput2" onChange={(event)=>setUsername(event.target.value)}/>
              <label htmlFor="floatingInput2">Username</label>
         </div>
         
         <div className="form-floating">
-            <input type="password" className="form-control" id="floatingPassword2" onChange={(event)=>setPassword(event.target.value)}/>
+            <input type="password" value={password} className="form-control" id="floatingPassword2" onChange={(event)=>setPassword(event.target.value)}/>
             <label htmlFor="floatingPassword2">Password</label>
         </div>
 
