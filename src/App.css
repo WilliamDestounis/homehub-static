@@ -50,9 +50,8 @@
   
 .img{
     background-image: url(../public/homes.jpg) ;
-    background-position: center;
-    background-size:cover;
-    height: 100vh;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
 }
 
 
