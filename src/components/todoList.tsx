@@ -74,6 +74,8 @@ export const TodoList = ()=>{
             }catch(e){
                 console.log(e);
             }
+
+            setTodo("");
         }
         else{
             alert("Cannot Add Blank Todo")
@@ -131,7 +133,7 @@ export const TodoList = ()=>{
             </ul>
 
             <div className="form-floating mt-3 mb-3">
-                <input type="text" className="form-control" id="todoInput" onChange={(event)=>{setTodo(event.target.value)}}/>
+                <input type="text" value={todo} className="form-control" id="todoInput" onChange={(event)=>{setTodo(event.target.value)}}/>
                 <label htmlFor="todoInput">Todo</label>
             </div>
 
