@@ -81,6 +81,10 @@
     columns: 2;
 }
 
+.ledger-item{
+    break-inside: avoid-column;
+}
+
 .user-chat{
     background-color: rgb(65, 105, 250);
 }
