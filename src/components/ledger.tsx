@@ -158,37 +158,39 @@ export const Ledger = ()=>{
 
         <div className="ledger mt-3">
 
+            <div className="ledger-item">
+                <div className = "form">
+                    <div className = "in-form">
 
-            <div className = "form">
-                <div className = "in-form">
+                        <h1>Receivables</h1>
 
-                    <h1>Receivables</h1>
-
-                    <ul className = "list-group in-form">
-                        { recievables.map((element,index)=>{
-                        return <li className = "list-group-item" key={index} >{`${element.expName} - ${element.exp} `}</li>})}
-                    </ul>
-
-                </div>
-            </div>
-
-            <div className = "form">
-                <div className = "in-form ">
-
-                    <h1>Payables</h1>
-
-                    <ul className = "list-group in-form">
-                        { payables.map((element,index)=>{
-                        return <li className = {index===active ?"active list-group-item":"list-group-item"} key={index} onClick={()=>setActivePayable(index)}>
-                        {`${element.expName} - ${element.splitAmount}`}</li>})}
-                    </ul>
-
-                    <div className= "text-center">
-                        <button type="button" className="btn btn-success text-center" onClick={()=>onSubmit()}>pay</button>
+                        <ul className = "list-group in-form">
+                            { recievables.map((element,index)=>{
+                            return <li className = "list-group-item" key={index} >{`${element.expName} - ${element.exp} `}</li>})}
+                        </ul>
                     </div>
-
                 </div>
             </div>
+
+            <div className="ledger-item">
+                <div className = "form">
+                    <div className = "in-form ">
+
+                        <h1>Payables</h1>
+
+                        <ul className = "list-group in-form">
+                            { payables.map((element,index)=>{
+                            return <li className = {index===active ?"active list-group-item":"list-group-item"} key={index} onClick={()=>setActivePayable(index)}>
+                            {`${element.expName} - ${element.splitAmount}`}</li>})}
+                        </ul>
+
+                        <div className= "text-center">
+                            <button type="button" className="btn btn-success text-center" onClick={()=>onSubmit()}>pay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     
